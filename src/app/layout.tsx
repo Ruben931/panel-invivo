@@ -6,7 +6,7 @@ import NavigationDock from "./components/NavigationDock";
 import { NavbarProvider } from "./context/NavbarContext";
 import Box from "@mui/material/Box";
 
-const geist = Geist({
+const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
@@ -17,12 +17,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "INVIVO Panel - Gestion de Chantiers",
-  description: "Plateforme de gestion des chantiers de construction professionnels",
+  title: "Panel INVIVO - Interface Futuriste",
+  description: "Plateforme révolutionnaire avec interface next-gen pour la gestion intelligente",
   icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 
@@ -33,10 +33,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        <link rel="icon" type="image/svg+xml" href="/next.svg" />
-        <meta name="msapplication-TileImage" content="/next.svg" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <meta name="msapplication-TileImage" content="/favicon.png" />
       </head>
-      <body className={`${geist.variable} ${geistMono.variable}`}> 
+      <body className={`${geistSans.variable} ${geistMono.variable}`}> 
         <MuiThemeProvider>
           <NavbarProvider>
             <NavigationDock />

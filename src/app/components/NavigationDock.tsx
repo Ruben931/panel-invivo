@@ -26,7 +26,6 @@ import {
   Dashboard,
   Notifications
 } from "@mui/icons-material";
-import Image from "next/image";
 
 const navigationItems = [
   { 
@@ -108,15 +107,17 @@ export default function NavigationDock() {
 
         {/* Logo */}
         <Box sx={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            <Image
-              src="/logo.png"
-              alt="INVIVO Logo"
-              width={200}
-              height={60}
-              style={{ objectFit: 'contain' }}
-            />
-          </Box>
+          <Box
+            component="img"
+            src="/logo.png" // Remplace par le chemin de ton logo
+            alt="Logo"
+            sx={{
+              height: 55,
+              width: "auto",
+              maxWidth: 280,
+              objectFit: "contain"
+            }}
+          />
         </Box>
 
         {/* Page Actuelle */}
