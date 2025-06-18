@@ -21,6 +21,8 @@ export const metadata: Metadata = {
   description: "Plateforme de gestion des chantiers de construction professionnels",
   icons: {
     icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
 };
 

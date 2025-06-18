@@ -112,8 +112,8 @@ export default function NavigationDock() {
             <Image
               src="/logo.png"
               alt="INVIVO Logo"
-              width={120}
-              height={40}
+              width={200}
+              height={60}
               style={{ objectFit: 'contain' }}
             />
           </Box>
