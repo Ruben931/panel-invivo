@@ -5,7 +5,6 @@ import {
   Box, 
   Grid, 
   Container, 
-  Paper, 
   List,
   ListItem,
   ListItemText,
@@ -13,25 +12,18 @@ import {
   Chip,
   Button,
   Avatar,
-  LinearProgress,
   Divider
 } from "@mui/material";
-import Link from "next/link";
 import { 
-  Construction, 
-  Inventory, 
-  Groups, 
   TrendingUp, 
-  Warning,
   CheckCircle,
-  Schedule,
   Notifications,
   ArrowForward,
   LocalShipping,
   Build,
   Person,
   Today,
-  Assessment
+  Groups
 } from "@mui/icons-material";
 
 const latestInfo = [

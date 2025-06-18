@@ -25,7 +25,8 @@ import {
   InputLabel,
   Select,
   MenuItem,
-  ButtonGroup
+  ButtonGroup,
+  Collapse
 } from "@mui/material";
 import { 
   Schedule, 
@@ -41,7 +42,11 @@ import {
   Person,
   Search,
   Clear,
-  FilterList
+  FilterList,
+  Groups,
+  ExpandMore,
+  Pending,
+  Add
 } from "@mui/icons-material";
 
 const reunions = [
@@ -137,7 +142,7 @@ export default function ReunionsPage() {
 
   // Filtrage et tri des réunions
   const filteredAndSortedReunions = useMemo(() => {
-    let filtered = reunions.filter(reunion => {
+    const filtered = reunions.filter(reunion => {
       const matchesSearch = reunion.titre.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            reunion.lieu.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            reunion.organisateur.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -350,7 +355,7 @@ export default function ReunionsPage() {
             <Typography variant="body2" color="text.secondary">
               <strong>{filteredAndSortedReunions.length}</strong> réunion(s) trouvée(s)
               {searchTerm && (
-                <> pour <strong>"{searchTerm}"</strong></>
+                <> pour <strong>&ldquo;{searchTerm}&rdquo;</strong></>
               )}
               {statusFilter !== "tous" && (
                 <> • Statut: <strong>{statusFilter}</strong></>
