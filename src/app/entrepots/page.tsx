@@ -512,7 +512,12 @@ export default function EntrepotsPage() {
                   <Button 
                     variant="contained" 
                     size="small"
-                    onClick={() => window.location.href = '/stock?entrepot=' + selected.id}
+                    onClick={() => {
+                      // Navigation locale - reste dans l'application
+                      console.log('Affichage du stock complet pour l\'entrepôt:', selected.id);
+                      // Ici vous pouvez ajouter une logique pour afficher plus de détails
+                      // ou créer une page de stock locale plus tard
+                    }}
                     sx={{ borderRadius: 2 }}
                   >
                     Voir Stock Complet
